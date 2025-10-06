@@ -1,0 +1,39 @@
+---
+title: NZLUM
+template: splash
+next: false
+
+hero:
+  tagline: New Zealand Land Use Management classification system
+  image:
+    file: ../../assets/NZLUM.webp
+  actions:
+    - text: Explore the classification
+      link: /classification/structure
+      icon: right-arrow
+      variant: primary
+    - text: LRIS download
+      link: https://lris.scinfo.org.nz/layer/122805-new-zealand-land-use-management-version-03-nzlum-v03/
+      icon: external
+      variant: minimal
+---
+
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid stagger>
+  <LinkCard
+    title="Classification system"
+    href="/classification/structure"
+    description="Transparent rules, versioned updates, and real-world guidance for practitioners."
+  />
+  <LinkCard
+    title="Governance Group"
+    href="/classification/primary"
+    description="Plain-language definitions and examples."
+  />
+  <LinkCard
+    title="References and Documents"
+    href="/use/data"
+    description="Transparent rules, versioned updates, and real-world guidance for practitioners."
+  />
+</CardGrid>
