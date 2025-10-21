@@ -17,25 +17,32 @@ export default defineConfig({
         { label: 'Email',  href: 'mailto:you@example.org', icon: 'email' }
       ],
       sidebar: [
-        { label: 'Overview', link: '/' },
+        { label: 'New Zealand Land Use Management (NZLUM) classification system', link: '/' },
         {
           label: 'Classification',
           items: [
-            { label: 'Classification system', link: '/classification/structure' },
-            { label: 'Classes', link: '/classification/primary' },
+            { label: 'Classification system', link: '/classification/system' },
+            { label: 'Classes', link: '/classification/classes' },
+            { label: 'Class 1.0.0', link: '/classification/class-1' },
+            { label: 'Class 2.0.0', link: '/classification/class-2' },
+            { label: 'Class 3.0.0', link: '/classification/class-3' },
+            { label: 'Data structure', link: '/classification/structure' },
+            { label: 'Tenure', link: '/classification/tenure' },
+            { label: 'Scale & Temporality', link: '/classification/scale' },
+            { label: 'Format', link: '/classification/format' },
           ],
         },
         {
-          label: 'Use',
+          label: 'Governance',
           items: [
-            { label: 'FAQs', link: '/use/faq' },
+            { label: 'Governance Group', link: '/governance/governance' },
           ],
         },
         {
-          label: 'Reference',
+          label: 'References',
           items: [
             { label: 'Terms', link: '/reference/terms' },
-            { label: 'Citations', link: '/reference/citations' },
+            { label: 'Documents', link: '/reference/documents' },
           ],
         },
       ],
