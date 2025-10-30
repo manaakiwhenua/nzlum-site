@@ -3,8 +3,8 @@ import starlight from '@astrojs/starlight';
   
 
 export default defineConfig({
-  site: 'https://ChocopieKewpie.github.io',
-  base: '/',
+  site: 'https://manaakiwhenua.github.io',
+  base: '/nzlum-site/',
   integrations: [
     starlight({
       title: 'NZLUM',
@@ -13,8 +13,7 @@ export default defineConfig({
       favicon: '/favicon.svg',
 	  customCss: ['./src/custom.css'],
       social: [
-        { label: 'GitHub', href: 'https://github.com/ChocopieKewpie/ChocopieKewpie.github.io', icon: 'github' },
-        { label: 'Email',  href: 'mailto:you@example.org', icon: 'email' }
+        { label: 'GitHub', href: 'https://github.com/manaakiwhenua/nzlum-site', icon: 'github' },
       ],
       sidebar: [
         { label: 'New Zealand Land Use Management (NZLUM) classification system', link: '/' },
