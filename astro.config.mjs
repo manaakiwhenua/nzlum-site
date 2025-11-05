@@ -3,8 +3,8 @@ import starlight from '@astrojs/starlight';
   
 
 export default defineConfig({
-  site: 'https://manaakiwhenua.github.io',
-  base: '/nzlum-site/',
+  site: 'https://nzlum.landcareresearch.co.nz',
+  base: '/',
   integrations: [
     starlight({
       title: 'NZLUM',
