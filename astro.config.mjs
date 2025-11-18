@@ -32,9 +32,10 @@ export default defineConfig({
           ],
         },
         {
-          label: 'Governance',
+          label: 'About us',
           items: [
-            { label: 'Governance Group', link: '/governance/governance' },
+            { label: 'Governance Group - New Zealand Land-use Data Advisory Group (NZLAG)', link: '/governance/governance' },
+            { label: 'Contact Us', link: '/governance/contact' },
           ],
         },
         {
@@ -43,7 +44,8 @@ export default defineConfig({
             { label: 'Terms', link: '/reference/terms' },
             { label: 'Documents', link: '/reference/documents' },
           ],
-        },
+        }
+        ,
       ],
     }),
   ],

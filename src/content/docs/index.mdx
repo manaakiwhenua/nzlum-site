@@ -17,23 +17,32 @@ hero:
       icon: external
       variant: minimal
 ---
-
+import { Aside } from '@astrojs/starlight/components';
 import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+
+<Aside type="note" title="Explore the latest map!">
+  Explore the latest data using the <a href="https://experience.arcgis.com/experience/e302ceddcf65496bafc808844b4d8b43?draft=true" target="_blank" rel="noopener">LUMin tool</a>.
+</Aside>
+
+<Aside type="danger" title="Feedback wanted!">
+  Please contribute your feedback using the <a href="https://arcg.is/11qqOi1" target="_blank" rel="noopener">NZLUM feedback form</a>.
+</Aside>
 
 <CardGrid stagger>
   <LinkCard
     title="Classification system"
     href="/classification/system"
-    description="Transparent rules, versioned updates, and real-world guidance for practitioners."
+    description="The NZLUM classification system, including rules, classes, and decision pathways for consistent land-use and management mapping."
   />
   <LinkCard
-    title="Governance Group"
+    title="About Us & Governance Group"
     href="/governance/governance"
-    description="Plain-language definitions and examples."
+    description="Learn about the NZLUM programme, its purpose, and the governance group guiding its development."
   />
   <LinkCard
     title="Documents"
     href="/reference/documents"
-    description="Transparent rules, versioned updates, and real-world guidance for practitioners."
+    description="Access reports, methodology documents, and supporting material used in the NZLUM development."
   />
 </CardGrid>
