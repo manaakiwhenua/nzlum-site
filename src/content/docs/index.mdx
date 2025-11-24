@@ -17,9 +17,8 @@ hero:
       icon: external
       variant: minimal
 ---
-import { Aside } from '@astrojs/starlight/components';
-import { LinkCard, CardGrid } from '@astrojs/starlight/components';
-
+import { Aside, LinkCard, CardGrid } from '@astrojs/starlight/components';
+import SiteFooter from '../../components/SiteFooter.astro';
 
 <Aside type="note" title="Explore the latest map!">
   Explore the latest data using the <a href="https://experience.arcgis.com/experience/e302ceddcf65496bafc808844b4d8b43?draft=true" target="_blank" rel="noopener">LUMin tool</a>.
@@ -46,3 +45,5 @@ import { LinkCard, CardGrid } from '@astrojs/starlight/components';
     description="Access reports, methodology documents, and supporting material used in the NZLUM development."
   />
 </CardGrid>
+
+<SiteFooter />

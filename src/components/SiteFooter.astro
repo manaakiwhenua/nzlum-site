@@ -1,0 +1,88 @@
+---
+const year = new Date().getFullYear();
+const institute = 'Bioeconomy Science Institute (BSI)'
+const email = 'landuse@landcareresearch.co.nz';
+const subject = 'NZLUM website enquiry';
+
+const mailto = `mailto:${email}?siubject=${encodeURIComponent(subject)}`;
+---
+<footer class="sl-footer">
+  <div class="container">
+    <nav class="links">
+      <a href="/classification/system">Classification</a>
+      <a href="/governance/governance">Governance</a>
+      <a href="/reference/documents">Documents</a>
+
+      <a href={mailto} class="email-link" aria-label={`Email ${email}`}>
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" class="icon">
+          <path fill="currentColor"
+            d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.236-7.2 4.5a1.5 1.5 0 0 1-1.6 0L4 8.236V6l8 5 8-5v2.236Z" />
+        </svg>
+        Email us
+      </a>
+    </nav>
+
+    <p class="meta">
+      © {year} {institute} • <a href={mailto} class="email-inline">{email}</a>
+    </p>
+  </div>
+
+  <style>
+    .sl-footer {
+      padding: 2rem 1rem;
+      border-top: 1px solid var(--sl-color-hairline);
+    }
+    .container {
+      max-width: 72rem;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem 1.5rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Make the nav a row and space links with gap */
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: .75rem 1rem;
+    }
+
+    /* General link styles */
+    .links a {
+      text-decoration: none;
+      color: var(--sl-color-text);
+    }
+    .links a:hover { text-decoration: underline; }
+
+    /* Keep icon and label on one line */
+    .email-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      white-space: nowrap;     /* prevents line break between icon and text */
+      padding: .4rem .75rem;
+      border-radius: .5rem;
+      /* background: var(--sl-color-accent); */
+      color: var(--sl-color-bg);
+      font-weight: 600;
+      text-decoration: none;
+      line-height: 1;          /* tighter alignment */
+    }
+    .email-link:hover { filter: brightness(1.05); }
+    .email-link .icon { flex-shrink: 0; }  /* icon won’t collapse */
+
+    .meta {
+      margin: 0;
+      font-size: .875rem;
+      color: var(--sl-color-text-secondary);
+    }
+    .email-inline {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+  </style>
+</footer>

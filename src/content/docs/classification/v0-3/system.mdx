@@ -1,0 +1,85 @@
+---
+title: New Zealand Land Use Management Classification System (NZLUM) 
+description: Overview of NZLUM.
+prev: false
+---
+
+import { Aside, Card } from '@astrojs/starlight/components';
+
+*Version 0.3*
+
+*Developed by Manaaki Whenua – Landcare Research*
+
+![NZLUM V8](../../../../assets/by.svg)
+
+<Card title= "Whakataukī"> 
+
+    Kotahi te aho ka whati, ki te kāpuia e kore e whati.
+
+    *One strand of flax is easy to break, but many strands together will stand strong.*
+    
+    — Kīngi Tāwhiao
+</Card>
+
+**NZLUM** adapts the **Australian Land Use and Management (ALUM v8)** classification for New Zealand, aligning with national datasets and frameworks such as **SOE soil quality monitoring** (Cavanagh & Whitehead 2022, 2023)<sup>1 2</sup>, **Waikato Integrated Scenario Explorer** (Rutledge et al. 2016)<sup>3</sup>, **Land Use Database version 4** (Price et al. 2010)<sup>4</sup>, **NZ Planning Standards** (MfE 2019)<sup>5</sup>, and **LINZ rating rules**(2010)<sup>6</sup>.
+
+---
+## Purpose and Adaptation
+
+ALUM provides a strong data structure for standardisation. Its [CC-BY 3.0 Australia Licence](https://creativecommons.org/licenses/by/3.0/au) explicitly allows adaptation.  
+While many ALUM classes are retained, NZLUM significantly restructures the hierarchy and adds classes relevant to Aotearoa New Zealand.
+
+#### Key Changes from ALUM v8
+
+- **Irrigation removed** as a primary class; it is now a *management practice* attribute.  
+- **Water** removed as a primary class; it is now treated as a *land-cover attribute* (`river`, `lake`, etc.).  
+
+---
+## Treatment of Water
+
+Rather than defining water as a land-use class, NZLUM records it as an attribute with a **controlled vocabulary** (e.g., `lake`, `reservoir`, `river`, `wetland`, `marine`).  
+Subtypes (e.g., `wetland bog`, `marine inshore`).
+
+Due to the significance of water for Māori- further engagement with iwi/Māori is needed to finalise water representation, recognising its unique cultural and environmental significance.
+
+---
+## Attribute Framework
+
+NZLUM follows ALUM’s approach of **attributes** to land-use classes to record additional information (e.g. `land management practices`, or `commodities` ) using defined terminology.  
+
+*These attributes are optional, but they should be included where information permits.*
+
+### Proposed Attributes
+
+- **Commodity:** *As in ALUM V8*,  captures information about crops and livestock (useful for biosecurity, economic modelling, nutrient modelling, greenhouse gas estimation, site-selection, etc.).  
+- **Management practice:** *As in ALUM V8*, operational details such as irrigation, rotations, dairy wintering off, etc.  
+- **Tenure:** `land_estate` and `land_status` Reflect ownership or rights affecting land use.  
+- **Zoning:** such as described from NZ Planning Standards (2019) for linking planning and use.  
+- **Land cover:** current land cover at time of mapping for crop rotation or mapping context.  
+- **Permeability:** sealed / unsealed surfaces, especially in built environments.  
+- **Water:** controlled terms as above.
+
+**Attributes** are **categorical**; continuous data (e.g., stocking rate) should be stored separately or discretised.
+
+<Aside type="tip">
+Attributes allow reclassification and filtering (e.g. irrigated vs. non-irrigated, or sealed vs. unsealed surfaces) without changing the base land-use class.
+</Aside>
+
+---
+## Summary
+
+NZLUM offers a **general-purpose** classification for modelling and environmental management in New Zealand.  
+It balances ALUM’s standardisation with local context, and flexibility for future adaptation.
+
+---
+
+## References
+
+<sup>1</sup> Cavanagh J, Whitehead B 2022. *Land-use classification for state of the environment soil-quality monitoring.* Manaaki Whenua – Landcare Research LC4146.  [https://www.envirolink.govt.nz/assets/Envirolink/2222-GSDC170-Land-use-classification-for-state-of-the-environment-soil-quality-monitoring-and-reporting.pdf](Link)
+
+<sup>2</sup> Cavanagh J, Whitehead B 2023. *Enabling flexibility and connectivity in land-use classification.* Manaaki Whenua – Landcare Research LC4309.  [https://www.envirolink.govt.nz/assets/Envirolink/R18-4-Enabling-flexibility-and-connectivity-in-land-use-classification-for-state-of-the-environment-soil-quality-monitoring.pdf](Link)
+
+<sup>3</sup> Rutledge D et al. 2016. *Waikato Integrated Scenario Explorer (WISE).* Waikato Regional Council Tech Report #3506882.  
+<sup>4</sup> Price R, Rutledge D, Fraser M 2010. *New Zealand Land Use Database.* Envirolink Project LCRX0901.  
+<sup>5</sup> MfE 2019. *National Planning Standards.* [https://environment.govt.nz/publications/national-planning-standards/](Link)
+<sup>6</sup> LINZ 2010. *Rating Valuations Rules 2008 (v1 Oct 2010) – LINZS30300.* [https://www.linz.govt.nz/resources/regulatory/rating-valuations-rules-2008-version-date-1-october-2010-linzs30300](Link)

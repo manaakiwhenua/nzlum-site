@@ -1,0 +1,35 @@
+---
+title: Data Structure
+description: Attribute schema for land-use information
+---
+
+This section specifies the proposed data structure for the attribution of land-use information.  
+Each set of attributes applies to one geographical unit and can contain information about the **primary and ancillary land uses**, as well as attributes for **disambiguation**, **end-user reclassification**, **recording provenance**, and **operator comments**.
+
+| attribute | type | example | notes |
+| --- | --- | --- | --- |
+| **lu_code_primary** | integer | `1` | Numerical land use code (primary use) at the primary level |
+| **lu_code_secondary** | integer | `2` | Numerical land use code (primary use) at the secondary level |
+| **lu_code_tertiary** | integer | `3` | Numerical land use code (primary use) at the tertiary level |
+| **lu_code** | string | `1.2.3` | Complete land use code (primary use) |
+| **lu_description** | string | `Natural Heritage` | Land use class label (primary use) |
+| **lu_code_ancillary** | (sorted set of) string | `2.2.0,3.2.1` | Land use code (ancillary uses), multiple uses are to be specified with comma separation with optional whitespace characters |
+| **commod** | (sorted set of) string | `cattle dairy` | Commodity type; multiple commodities are to be specified with comma separation with optional whitespace characters |
+| **commod_ancillary** | (sorted set of )string | `pulpwood` | Commodity type(s) relating to the ancillary land use code(s) |
+| **manage** | (sorted set of) string | `irrigation spray,organic` | Management practices; multiple practices are to be specified with comma separation with optional whitespace characters |
+| **manage_ancillary** | string | `free standing` | Management practices relating to the ancillary use code(s)
+| **land_estate** | string | `freehold` | Estate type |
+| **land_status** | string | [TBD] | Land status type (public–private continuum; terminology to be determined) |
+| **water** | string | `lake` | Water type (`null` for non-water) |
+| **zone** | string | `Large format retail zone` | District plan zone; terminology to be taken from the Zone Framework Standard (National Planning Standards, 2019) |
+| **permeability** | string | `sealed` | Permeability type (`sealed` or `unsealed`) |
+| **confidence** | integer | `3` | Confidence 1-4, a qualitative assessment relating to the overall operator confidence in the assigned classification |
+| **luc_date** | date | `2024-05-26` | Date of land use classification, "last modified" |
+| **source_data** | (sorted set of) string | `DVR,NRC,LCDB v5,field mapping` | Primary source data (e.g. field mapping, local knowledge, ancillary dataset, air photo, imagery). Often, multiple sources of information are combined to come to a conclusion; to a reasonable extent, all should be specified. |
+| **source_data_doi** | (set of) uri | `doi:10.26060/W5B4-WK93` | Optional (i.e. when available) DOI or HTTP URI for source data |
+| **source_date** | string (date range) | `[2011-05-02,2025-01-03)` | Combined date range of spatial features (e.g. image date, ancillary photo date, last edited date) in primary source data, at feature (preferentially) or dataset level, using interval notation for inclusive and exclusive endpoints |
+| **source_scale** | string (integer interval) | `[10,60]` | Combined integer (interval)[https://en.wikipedia.org/wiki/Interval_(mathematics)] indicating the precision of source data, in the CRS units (metres) |
+
+
+---
+*Last updated: October 2025*
