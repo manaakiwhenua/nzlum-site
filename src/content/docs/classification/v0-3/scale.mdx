@@ -1,5 +1,5 @@
 ---
-title: Geographic Scale and Temporality
+title: Scale and Temporality
 description: Guidelines for mapping unit scale, source precision, and temporal interpretation
 ---
 
@@ -9,8 +9,6 @@ The intended geographic unit of this classification system is the **property par
 However, it may be appropriate to map **sub-parcel geographic entities** for particular classes - particularly if the boundary of natural features (forests, waterways) is pertinent, if the parcel is very large, and where source-data scale permits such definition.
 
 Whether to map sub-parcel areas is therefore left to **operator discretion**, but the intended and minimum level of attribution is the **property parcel**, and therefore property-parcel identifiers and geographic boundaries **must be present** in output land-use data.
-
----
 
 ## Source scale
 
@@ -41,8 +39,6 @@ When **multiple input datasets** are used together to inform a classification de
 the ranges should be **merged** - compute the smallest interval that includes all given ranges  
 (e.g. PostgreSQL `range_merge` function).  
 Example: `[1,2)` and `[3,4)` → `[1,4)`.
-
----
 
 ## Temporality
 
