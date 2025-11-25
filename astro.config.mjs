@@ -5,36 +5,45 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
   site: 'https://nzlum.landcareresearch.co.nz',
   base: '/',
+  redirects: {
+    'classification/system/': '/classification/v0-3/system/' // Redirect URL without a version spec to the latest available version
+  },
   integrations: [
     starlight({
       title: 'NZLUM',
       description: 'New Zealand Land Use & Management classification',
       logo: { src: './src/assets/MWLR_BSI.png', alt: 'NZLUM' },
-      favicon: '/favicon.svg',
+      favicon: '/favicon.png',
 	  customCss: ['./src/custom.css'],
       social: [
         { label: 'GitHub', href: 'https://github.com/manaakiwhenua/nzlum-site', icon: 'github' },
       ],
       sidebar: [
-        { label: 'New Zealand Land Use Management (NZLUM) classification system', link: '/' },
+        { label: 'NZLUM classification system', link: '/' },
         {
-          label: 'Classification',
+          label: 'Classification (v0.3)',
+          collapsed: true,
           items: [
-            { label: 'Classification system', link: '/classification/system' },
-            { label: 'Classes', link: '/classification/classes' },
-            { label: 'Class 1.0.0', link: '/classification/class-1' },
-            { label: 'Class 2.0.0', link: '/classification/class-2' },
-            { label: 'Class 3.0.0', link: '/classification/class-3' },
-            { label: 'Data structure', link: '/classification/structure' },
-            { label: 'Tenure', link: '/classification/tenure' },
-            { label: 'Scale & Temporality', link: '/classification/scale' },
-            { label: 'Format', link: '/classification/format' },
+            'classification/v0-3/system',
+            'classification/v0-3/structure',
+            'classification/v0-3/scale',
+            'classification/v0-3/format',
+            'classification/v0-3/tenure',
+            {
+              label: 'Classes',
+              autogenerate: {directory: 'classification/v0-3/classes', collapsed: true},
+              collapsed: false,
+            }
           ],
         },
         {
-          label: 'Governance',
+          label: 'About us',
           items: [
-            { label: 'Governance Group', link: '/governance/governance' },
+            {
+              label: 'Governance',
+              autogenerate: {directory: 'governance/NZLUSG'}
+            },
+            { label: 'Contact us', link: '/governance/contact' },
           ],
         },
         {
@@ -43,7 +52,8 @@ export default defineConfig({
             { label: 'Terms', link: '/reference/terms' },
             { label: 'Documents', link: '/reference/documents' },
           ],
-        },
+        }
+        ,
       ],
     }),
   ],
