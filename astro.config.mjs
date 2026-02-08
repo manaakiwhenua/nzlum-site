@@ -12,7 +12,7 @@ export default defineConfig({
     starlight({
       title: 'NZLUM',
       description: 'New Zealand Land Use & Management classification',
-      logo: { src: './src/assets/MWLR_BSI.png', alt: 'NZLUM' },
+      logo: { src: './src/assets/BSI.png', alt: 'NZLUM' },
       favicon: '/favicon.png',
 	  customCss: ['./src/custom.css'],
       social: [
