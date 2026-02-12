@@ -51,6 +51,7 @@ export default defineConfig({
           items: [
             { label: 'Terms', link: '/reference/terms' },
             { label: 'Documents', link: '/reference/documents' },
+            { label: 'Videos', link: '/reference/videos' },
           ],
         }
         ,
