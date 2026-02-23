@@ -1,0 +1,22 @@
+---
+title: Data format
+description: Requirements and recommendations for spatial data formats and coordinate reference systems
+---
+
+## Data format
+
+**Vector data format:**  
+[GeoPackage v1.4.0 or later](https://www.geopackage.org/spec130/index.html) and/or [GeoParquet v1.0.0 or later](https://geoparquet.org/).
+
+Raster data (or other formats) _may_ be produced for user convenience, but **no particular format is specified**, due to the lack of wide acceptance of a raster data format that supports attribute tables.  
+Vector data is **mandatory** for classification output.
+
+## Coordinate system
+
+Any current **official projection** may be used:
+
+| Projection name | Acronym | EPSG Code | Typical usage |
+| --- | --- | --- | --- |
+| **New Zealand Transverse Mercator 2000** | NZTM2000 | `2193` | Default national coordinate system for mainland New Zealand.|
+| **NZGD Meridional Circuits** | -- | `2105-2132` | Used for regional extracts or offshore islands (e.g. Auckland Islands, Chatham Islands).|
+| **New Zealand Continental Shelf Lambert Conformal 2000** | NZCS2000 | `17964` | Used for offshore and continental-shelf mapping where scale preservation over large areas is important. |

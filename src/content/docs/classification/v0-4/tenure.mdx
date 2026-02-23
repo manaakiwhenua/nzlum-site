@@ -1,0 +1,76 @@
+---
+title: Land Tenure
+description: Attributes describing land ownership and governance context
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+Information relating to land tenure should be captured in two attributes: `land_estate` and `land_status`. How land is owned, and by whom, is an important consideration for how land may be used or managed. This information is included because it directly participates in the intended use of the land use classification system, though it is auxiliary.
+
+Please see: [LINZ: Tenure review](https://www.linz.govt.nz/our-work/crown-property-management/pastoral-land/tenure-review)
+
+### `land_estate`
+
+Controlled vocabulary of types of tenure in New Zealand
+
+- `freehold` or (to be more specific) `māori freehold`, i.e. estate in fee simple
+- `leasehold` or (to be more specific) `crown leasehold` (e.g. a Crown pastoral lease)
+- `cross lease`
+- `stratum estate`, i.e. forms of unit title, according to whether land that has been subdivided was freehold or leasehold; `stratum estate in freehold`, `stratum estate in leasehold` (to be more specific)
+
+### `land_status`
+
+A non-exhaustive list of land-status types organised along a gradient from Crown (public) to private.
+
+<Aside>
+_To be determined_: a controlled vocabulary to describe these by reference to some systematic grouping and authoritative list of terms.
+</Aside>
+
+#### 1. Crown
+- Department of Conservation  
+- Territorial Local Authorities  
+  - Regional councils  
+  - Unitary authorities  
+  - City councils  
+  - District councils  
+- Offices of Parliament  
+- State services departments  
+  - Public service departments  
+  - Departmental agencies  
+  - State services organisations outside the core public service, e.g.  
+    - NZDF  
+    - NZ Police  
+- Land Information New Zealand (LINZ), with respect to unallocated Crown land  
+
+#### 2. Intermediate
+- State-owned enterprises, e.g.  
+  - AsureQuality  
+  - Electricity Corporation of New Zealand  
+  - Kiwirail  
+  - Landcorp  
+  - MetService  
+  - Transpower New Zealand  
+- State-(part-)owned enterprises, e.g.  
+  - Earth Science New Zealand
+  - Bioeconomy Science Institute
+  - Air New Zealand (51.95% government ownership)  
+  - Christchurch Airport (25%)  
+  - Housing New Zealand Corporation  
+  - Genesis Energy Limited (52.4%)  
+  - Mercury Energy (51.15%)  
+  - Meridian Energy (51.02%)  
+- Non-SOE Crown-owned companies, e.g.  
+  - Public Research Organisations
+  - TVNZ  
+  - RNZ  
+- Universities  
+- Institutes of Technology and Polytechnics  
+- Wānanga (those that have been granted _Crown entity_ status)  
+- Council-controlled organisations (e.g. Ports of Auckland)
+
+#### 3. Private
+- Businesses (corporations, companies)  
+- Trusts  
+- Families  
+- Individuals  
+- Iwi

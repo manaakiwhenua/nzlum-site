@@ -6,13 +6,9 @@ prev: false
 
 import { Aside, Card, LinkButton, TabItem, Tabs } from '@astrojs/starlight/components';
 
-*Version 0.3* [DEPRECATED]
-
-Click [here](/classification/system) for the latest version.
+*Version 0.4*
 
 *Developed by Manaaki Whenua – Landcare Research*
-
-![NZLUM V8](../../../../assets/by.svg)
 
 <Card title= "Whakataukī"> 
 
@@ -51,14 +47,10 @@ NZLUM follows ALUM's approach of using **attributes** of land-use to record addi
 
 Such attributes are considered optional, but they should be included where information permits.
 
-### Attributes
-
 - **Commodity:** captures information about crops and livestock (useful for biosecurity, economic modelling, nutrient modelling, greenhouse gas estimation, site-selection, etc.).  
 - **Management practices:** operational details such as irrigation, rotations, dairy wintering off, etc.  
 - **Tenure:** `land_estate` and `land_status` reflect ownership or rights affecting land use.  
 - **Zoning:** council zones, such as those proposed in the NZ Planning Standards (2019) allow the linking of planning and actual (current) use and land use _potential_. 
-{/* - **Land cover:** current land cover at time of mapping for crop rotation or mapping context. */}
-{/* - **Permeability:** sealed / unsealed surfaces, especially in built environments.   */}
 - **Water:** controlled terms describing various forms water bodies can take.
 
 **Attributes** are **categorical**.
@@ -79,50 +71,15 @@ Each primary class represents a distinct type of human interaction with the land
 Use attributes like <code>commodity</code>, <code>management_practice</code>, and <code>tenure</code> to add context and detail.
 </Aside>
 
-![NZLUM V8](../../../../assets/NZLUM.svg)
-
-### Hierarchical structure
-
-Classes are arranged hierarchically:
-
-- **Primary classes (1–3)** - broad categories of land use  
-- **Secondary and tertiary subclasses** - progressively more specific (e.g. 2.2.0 = Grazing systems, 2.2.1 = Dairy)
-
-Each subclass adds definitional precision.
-
-### Primary Classes
-
-At the highest tier, NZLUM divides land into **three main primary classes**, reflecting the degree of modification and purpose of use:
-
-<Tabs>
-
-    <TabItem label="1.0.0 Conservation and Minimal Use">
-        <p>Land with a relatively low level of human intervention. May be reserved by government for conservation, or protected under other legal or administrative arrangements. Areas can have multiple uses, but nature conservation is central. Some land may remain unused due to deliberate choice or circumstance.</p>
-        <LinkButton href="/classification/v0-3/classes/100/"> 1.0.0 Conservation and Minimal Use </LinkButton>
-    </TabItem>
-
-    <TabItem label="2.0.0 Production Agriculture and Plantations">
-        <p>Land used primarily for **primary production**, where native vegetation has largely been replaced by introduced species through clearing, sowing, or fertiliser application. Includes plantation forestry, pasture, cropping, fodder, and a wide range of horticulture. If irrigation infrastructure or water-take consents exist, record **irrigation** as a *management practice* even if it has not been recently applied.</p>
-        <LinkButton href="/classification/v0-3/classes/200/"> 2.0.0 Production Agriculture and Plantations </LinkButton>
-    </TabItem>
-
-    <TabItem label="3.0.0 Built Environment">
-        <p>Land uses involving high levels of modification of natural processes, typically associated with settlements and infrastructure. Such activities can substantially remodel vegetation, surface and groundwater systems, and terrain to support urban, industrial, or service functions.</p>
-        <LinkButton href="/classification/v0-3/classes/300/"> 3.0.0 Built Environment </LinkButton>
-    </TabItem>
-
-</Tabs>
-
 ### Relationship with attributes
 
 Classification of land-use class can include **categorical attributes** describing:
 
 - **Commodity** - e.g. `cattle beef`, `kiwifruit`, `pine`  
-- **Management practice** - e.g. `irrigated`, `wintering off`, `organic`  
+- **Management practice** - e.g. `irrigated`  
 - **Tenure and zoning** - `land_estate` or `land_status`
 - **Land cover** - current vegetation or surface cover  
 - **Water** - hydrological or marine feature type  
-- **Permeability** - `sealed` / `unsealed`
 
 ## References
 

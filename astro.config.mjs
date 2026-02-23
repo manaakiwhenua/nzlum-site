@@ -6,7 +6,7 @@ export default defineConfig({
   site: 'https://nzlum.landcareresearch.co.nz',
   base: '/',
   redirects: {
-    'classification/system/': '/classification/v0-3/system/' // Redirect URL without a version spec to the latest available version
+    'classification/system/': '/classification/v0-4/system/' // Redirect URL without a version spec to the latest available version
   },
   integrations: [
     starlight({
@@ -32,6 +32,22 @@ export default defineConfig({
             {
               label: 'Classes',
               autogenerate: {directory: 'classification/v0-3/classes', collapsed: true},
+              collapsed: false,
+            }
+          ],
+        },
+        {
+          label: 'Classification (v0.4)',
+          collapsed: false,
+          items: [
+            'classification/v0-4/system',
+            'classification/v0-4/structure',
+            'classification/v0-4/scale',
+            'classification/v0-4/format',
+            'classification/v0-4/tenure',
+            {
+              label: 'Classes',
+              autogenerate: {directory: 'classification/v0-4/classes', collapsed: true},
               collapsed: false,
             }
           ],
