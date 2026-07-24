@@ -12,20 +12,28 @@ hero:
       link: /classification/system
       icon: right-arrow
       variant: primary
-    - text: LRIS download
+    - text: 2025 [v0.3]
       link: https://lris.scinfo.org.nz/layer/122805-new-zealand-land-use-management-version-03-nzlum-v03/
+      icon: external
+      variant: minimal
+    - text: 2026 [v0.4]
+      link: https://lris.scinfo.org.nz/set/7516-nzlum-v04-2026/
       icon: external
       variant: minimal
 ---
 import { Aside, LinkCard, CardGrid } from '@astrojs/starlight/components';
 import SiteFooter from '../../components/SiteFooter.astro';
 
-<Aside type="note" title="Explore the latest map!">
-  Explore the latest data using the <a href="https://experience.arcgis.com/experience/e302ceddcf65496bafc808844b4d8b43?draft=true" target="_blank" rel="noopener">LUMin tool</a>.
+<Aside type="note" title="2026 national land use map is available for download and use">
+  Explore <a href="lris.scinfo.org.nz/set/7516-nzlum-v04-2026/" target="_blank" rel="noopener">NZLUM 2026</a> via LRIS.
 </Aside>
 
-<Aside type="danger" title="Feedback wanted!">
+{/* <Aside type="danger" title="Feedback wanted!">
   Please contribute your feedback using the <a href="https://arcg.is/11qqOi1" target="_blank" rel="noopener">NZLUM feedback form</a>.
+</Aside> */}
+
+<Aside type="tip" title="NZLUM v0.4 Summary PDF">
+  A summary PDF is available for download: <a href="../../../src/assets/v0.4.0/nzlum_v0.4.0.pdf" target="_blank" rel="noopener">NZLUM v0.4 Summary PDF</a>
 </Aside>
 
 <CardGrid stagger>
