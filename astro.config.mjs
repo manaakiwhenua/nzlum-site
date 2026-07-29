@@ -31,8 +31,10 @@ export default defineConfig({
             'classification/v0-3/tenure',
             {
               label: 'Classes',
-              autogenerate: {directory: 'classification/v0-3/classes', collapsed: true},
               collapsed: false,
+              items: [
+                { autogenerate: {directory: 'classification/v0-3/classes', collapsed: true} },
+              ],
             }
           ],
         },
@@ -47,8 +49,10 @@ export default defineConfig({
             'classification/v0-4/tenure',
             {
               label: 'Classes',
-              autogenerate: {directory: 'classification/v0-4/classes', collapsed: true},
               collapsed: false,
+              items: [
+                { autogenerate: {directory: 'classification/v0-4/classes', collapsed: true} },
+              ],
             }
           ],
         },
@@ -57,7 +61,9 @@ export default defineConfig({
           items: [
             {
               label: 'Governance',
-              autogenerate: {directory: 'governance/NZLUSG'}
+              items: [
+                { autogenerate: {directory: 'governance/NZLUSG'} },
+              ],
             },
             { label: 'Contact us', link: '/governance/contact' },
           ],
