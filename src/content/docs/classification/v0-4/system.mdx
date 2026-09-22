@@ -5,6 +5,7 @@ prev: false
 ---
 
 import { Aside, Card, LinkButton, TabItem, Tabs } from '@astrojs/starlight/components';
+import SummaryDiagram from '../../../../assets/v0.4.0/nzlum_v0.4.0_summary.svg';
 
 *Version 0.4*
 
@@ -22,7 +23,28 @@ import { Aside, Card, LinkButton, TabItem, Tabs } from '@astrojs/starlight/compo
 The New Zealand Land Use and Management (NZLUM) classification system adapts the **Australian Land Use and Management (ALUM)** classification for New Zealand.
 {/* , attempting to align with existing national datasets and frameworks such as **SOE soil quality monitoring** (Cavanagh & Whitehead 2022, 2023)<sup>1 2</sup>, **Waikato Integrated Scenario Explorer** (Rutledge et al. 2016)<sup>3</sup>, **Land Use Database version 4** (Price et al. 2010)<sup>4</sup>, **NZ Planning Standards** (MfE 2019)<sup>5</sup>, and **LINZ rating rules**(2010)<sup>6</sup>. */}
 
-A summary PDF is available for download: [NZLUM v0.4 Summary PDF](/v0.4.0/nzlum_v0.4.0.pdf)
+A summary PDF is available for download: <a href="/v0.4.0/nzlum_v0.4.0.pdf" target="_blank" rel="noopener">NZLUM v0.4 Summary PDF</a>
+
+## Classes
+
+Classes in **NZLUM** are hierarchical by design, this allows for both the aggregation of broad land-use categories and the disaggregation of specific subclasses for analysis and reporting.
+
+<Aside icon="star">
+Each primary class represents a distinct type of human interaction with the land.  
+Use attributes like <code>commodity</code>, <code>management_practice</code>, and <code>tenure</code> to add context and detail.
+</Aside>
+
+<SummaryDiagram class="summary-diagram" role="img" aria-label="Summary of the NZLUM v0.4 class hierarchy" />
+
+### Relationship with attributes
+
+Classification of land-use class can include **categorical attributes** describing:
+
+- **Commodity** - e.g. `cattle beef`, `kiwifruit`, `pine`  
+- **Management practice** - e.g. `irrigated`  
+- **Tenure and zoning** - `land_estate` or `land_status`
+- **Land cover** - current vegetation or surface cover  
+- **Water** - hydrological or marine feature type  
 
 ## Purpose and adaptation
 
@@ -63,25 +85,6 @@ Nothing in this specification should prevent the extension (widening) of the dat
 Attributes allow for end-use reclassification and filtering (e.g. irrigated vs. non-irrigated) without requiring the use of multiple land-use classes that are otherwise coherent.
 </Aside>
 
-
-## Classes
-
-Classes in **NZLUM** are hierarchical by design, this allows for both the aggregation of broad land-use categories and the disaggregation of specific subclasses for analysis and reporting.
-
-<Aside icon="star">
-Each primary class represents a distinct type of human interaction with the land.  
-Use attributes like <code>commodity</code>, <code>management_practice</code>, and <code>tenure</code> to add context and detail.
-</Aside>
-
-### Relationship with attributes
-
-Classification of land-use class can include **categorical attributes** describing:
-
-- **Commodity** - e.g. `cattle beef`, `kiwifruit`, `pine`  
-- **Management practice** - e.g. `irrigated`  
-- **Tenure and zoning** - `land_estate` or `land_status`
-- **Land cover** - current vegetation or surface cover  
-- **Water** - hydrological or marine feature type  
 
 ## References
 

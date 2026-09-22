@@ -5,6 +5,7 @@ prev: false
 ---
 
 import { Aside, Card, LinkButton, TabItem, Tabs } from '@astrojs/starlight/components';
+import SummaryDiagram from '../../../../assets/v0.3.0/nzlum_v0.3.0_summary.svg';
 
 *Version 0.3* [DEPRECATED]
 
@@ -26,49 +27,7 @@ Click [here](/classification/system) for the latest version.
 The New Zealand Land Use and Management (NZLUM) classification system adapts the **Australian Land Use and Management (ALUM)** classification for New Zealand.
 {/* , attempting to align with existing national datasets and frameworks such as **SOE soil quality monitoring** (Cavanagh & Whitehead 2022, 2023)<sup>1 2</sup>, **Waikato Integrated Scenario Explorer** (Rutledge et al. 2016)<sup>3</sup>, **Land Use Database version 4** (Price et al. 2010)<sup>4</sup>, **NZ Planning Standards** (MfE 2019)<sup>5</sup>, and **LINZ rating rules**(2010)<sup>6</sup>. */}
 
-## Purpose and adaptation
-
-ALUM provides a strong data structure for standardisation. Its [CC-BY 3.0 Australia Licence](https://creativecommons.org/licenses/by/3.0/au) explicitly allows adaptation.
-While some ALUM classes are retained, and the basic structre of the classification system is familiar, NZLUM significantly adapts some classes and adds new classes and attributes relevant to New Zealand.
-
-**Key Changes from ALUM v8:**
-
-- **Irrigation** removed as a primary class; it is now a *management practice* attribute.  
-- **Water** removed as a primary class; it is now treated as a independent attribute.
-
-The rationale for this adjustment is to recognise situations where water is a land cover occuring on a wider land use (such as a reservoir on a farm), and to recognise irrigation more consistently as a farm management practice, and not a land-use in itself.
-
-### Treatment of water
-
-Rather than defining water as a land-use class, as in ALUM, NZLUM records it as an attribute with a **controlled vocabulary** (i.e. using terms, `lake`, `reservoir`, `river`, `wetland`, `marine`).
-including subtypes (e.g., `lake hydro`).
-
-{/* Due to the significance of water for Māori, we recognise that  further engagement with iwi/Māori is needed to finalise water representation, recognising its unique cultural and environmental significance. */}
-
-### Attributes
-
-NZLUM follows ALUM's approach of using **attributes** of land-use to record additional information. These take the form of "land management practices" or "commodities", and adopt defined terminology.  
-
-Such attributes are considered optional, but they should be included where information permits.
-
-### Attributes
-
-- **Commodity:** captures information about crops and livestock (useful for biosecurity, economic modelling, nutrient modelling, greenhouse gas estimation, site-selection, etc.).  
-- **Management practices:** operational details such as irrigation, rotations, dairy wintering off, etc.  
-- **Tenure:** `land_estate` and `land_status` reflect ownership or rights affecting land use.  
-- **Zoning:** council zones, such as those proposed in the NZ Planning Standards (2019) allow the linking of planning and actual (current) use and land use _potential_. 
-{/* - **Land cover:** current land cover at time of mapping for crop rotation or mapping context. */}
-{/* - **Permeability:** sealed / unsealed surfaces, especially in built environments.   */}
-- **Water:** controlled terms describing various forms water bodies can take.
-
-**Attributes** are **categorical**.
-
-Nothing in this specification should prevent the extension (widening) of the data representation, e.g. to include continuous data to accomodate stocking rate information, demographic information, or other attributes.
-
-<Aside type="tip">
-Attributes allow for end-use reclassification and filtering (e.g. irrigated vs. non-irrigated) without requiring the use of multiple land-use classes that are otherwise coherent.
-</Aside>
-
+A summary PDF is available for download: <a href="/v0.3.0/nzlum_v0.3.0.pdf" target="_blank" rel="noopener">NZLUM v0.3 Summary PDF</a>
 
 ## Classes
 
@@ -79,7 +38,7 @@ Each primary class represents a distinct type of human interaction with the land
 Use attributes like <code>commodity</code>, <code>management_practice</code>, and <code>tenure</code> to add context and detail.
 </Aside>
 
-![NZLUM V8](../../../../assets/NZLUM.svg)
+<SummaryDiagram class="summary-diagram" role="img" aria-label="Summary of the NZLUM v0.3 class hierarchy" />
 
 ### Hierarchical structure
 
@@ -123,6 +82,49 @@ Classification of land-use class can include **categorical attributes** describi
 - **Land cover** - current vegetation or surface cover  
 - **Water** - hydrological or marine feature type  
 - **Permeability** - `sealed` / `unsealed`
+
+## Purpose and adaptation
+
+ALUM provides a strong data structure for standardisation. Its [CC-BY 3.0 Australia Licence](https://creativecommons.org/licenses/by/3.0/au) explicitly allows adaptation.
+While some ALUM classes are retained, and the basic structre of the classification system is familiar, NZLUM significantly adapts some classes and adds new classes and attributes relevant to New Zealand.
+
+**Key Changes from ALUM v8:**
+
+- **Irrigation** removed as a primary class; it is now a *management practice* attribute.  
+- **Water** removed as a primary class; it is now treated as a independent attribute.
+
+The rationale for this adjustment is to recognise situations where water is a land cover occuring on a wider land use (such as a reservoir on a farm), and to recognise irrigation more consistently as a farm management practice, and not a land-use in itself.
+
+### Treatment of water
+
+Rather than defining water as a land-use class, as in ALUM, NZLUM records it as an attribute with a **controlled vocabulary** (i.e. using terms, `lake`, `reservoir`, `river`, `wetland`, `marine`).
+including subtypes (e.g., `lake hydro`).
+
+{/* Due to the significance of water for Māori, we recognise that  further engagement with iwi/Māori is needed to finalise water representation, recognising its unique cultural and environmental significance. */}
+
+### Attributes
+
+NZLUM follows ALUM's approach of using **attributes** of land-use to record additional information. These take the form of "land management practices" or "commodities", and adopt defined terminology.  
+
+Such attributes are considered optional, but they should be included where information permits.
+
+### Attributes
+
+- **Commodity:** captures information about crops and livestock (useful for biosecurity, economic modelling, nutrient modelling, greenhouse gas estimation, site-selection, etc.).  
+- **Management practices:** operational details such as irrigation, rotations, dairy wintering off, etc.  
+- **Tenure:** `land_estate` and `land_status` reflect ownership or rights affecting land use.  
+- **Zoning:** council zones, such as those proposed in the NZ Planning Standards (2019) allow the linking of planning and actual (current) use and land use _potential_. 
+{/* - **Land cover:** current land cover at time of mapping for crop rotation or mapping context. */}
+{/* - **Permeability:** sealed / unsealed surfaces, especially in built environments.   */}
+- **Water:** controlled terms describing various forms water bodies can take.
+
+**Attributes** are **categorical**.
+
+Nothing in this specification should prevent the extension (widening) of the data representation, e.g. to include continuous data to accomodate stocking rate information, demographic information, or other attributes.
+
+<Aside type="tip">
+Attributes allow for end-use reclassification and filtering (e.g. irrigated vs. non-irrigated) without requiring the use of multiple land-use classes that are otherwise coherent.
+</Aside>
 
 ## References
 

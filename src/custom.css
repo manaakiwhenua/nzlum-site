@@ -38,3 +38,13 @@ table { border-radius: .5rem; overflow: hidden; }
 /* Links */
 a { text-underline-offset: 2px; }
 a:hover { text-decoration-thickness: 2px; }
+/* Inline classification summary diagrams (SVG components, not <img>) */
+svg.summary-diagram {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 824px;
+  margin-inline: auto;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: .5rem;
+}
