@@ -5,6 +5,8 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
   site: 'https://nzlum.landcareresearch.co.nz',
   base: '/',
+  // Starlight 0.43 stopped forcing the 'where' strategy; keep it so custom.css specificity is unchanged.
+  scopedStyleStrategy: 'where',
   redirects: {
     'classification/system/': '/classification/v0-4/system/' // Redirect URL without a version spec to the latest available version
   },
